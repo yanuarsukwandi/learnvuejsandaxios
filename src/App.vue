@@ -6,6 +6,7 @@
         {{ article.content }}
       </li>
     </ul>
+    <button @click="Load">Load</button>
   </div>
 </template>
 
@@ -19,8 +20,14 @@ export default {
   },
 
   async mounted() {
-    const response = await axios.get("http://localhost:3000/articles");
-    this.articles = response.data;
+    this.load();
+  },
+
+  methods: {
+    async load() {
+      const response = await axios.get("http://localhost:3000/articles");
+      this.articles = response.data;
+    }
   }
 };
 </script>
