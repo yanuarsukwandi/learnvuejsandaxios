@@ -6,7 +6,7 @@
         {{ article.content }}
       </li>
     </ul>
-    <button @click="Load">Load</button>
+    <button @click="Load">LoadA</button>
   </div>
 </template>
 
